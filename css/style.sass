@@ -1,0 +1,1031 @@
+@import "vars"
+
+*
+  margin: 0
+  padding: 0
+
+html, body
+  height: 100%
+
+.wrapper
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+.top
+  flex-grow: 1
+
+body 
+  font-family: 'Lato', sans-serif
+
+a
+  text-decoration: none
+
+.container
+  width: 1140px
+  margin: 0 auto
+
+.header
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17)
+  border: 1px solid #ececec
+  background-color: #ffffff
+  &__flex
+    height: 100px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__left,
+  &__right,
+  &__form
+    display: flex
+    align-items: center
+  &__cart
+    position: relative
+  &__cart:hover .drop-cart
+    display: block
+  &__cart-link
+    display: block
+    position: relative
+  &__cart-img
+    margin-right: 26px
+    width: 32px
+    height: 29px
+
+.badge
+  position: absolute
+  right: 15px
+  top: -8px
+  width: 19px
+  height: 19px
+  background-color: $color-effect
+  border-radius: 50%
+  text-align: center
+  color: #ffffff
+  font-size: 12px
+  font-weight: 700
+  line-height: 19px
+
+.logo
+  display: flex
+  align-items: center
+  color: $black-text
+  font-size: 27px
+  font-weight: 300
+  text-transform: uppercase
+  letter-spacing: 0.68px
+  &__img
+    margin-right: 13px
+    width: 59px
+    height: 51px
+  &__last-letter
+    color: $color-effect
+    font-weight: 700
+
+
+.header__form 
+  margin-left: 37px
+  border-radius: 3px
+  border: 1px solid #e6e6e6
+
+.button
+  background-color: $color-effect
+  color: #ffffff
+  transition: all 0.2s
+  &:hover
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+  &:active
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4) inset
+
+.header__button
+  width: 111px
+  height: 38px
+  font-size: 15px
+  font-weight: 400
+  line-height: 38px
+  letter-spacing: 0.38px
+  padding-left: 19px
+
+.header__button::after
+  content: "\f0d7"
+  font-family: FontAwesome
+  padding-left: 0.5em
+  color: #ffffff
+  font-size: 14px
+  line-height: 38px
+
+.browse
+  width: 73px
+  height: 38px
+  border-right: 1px solid #e6e6e6
+  background-color: #cdcdcc
+  background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%)
+  padding-left: 14px
+  position: relative
+
+.browse__link
+  color: $black-text
+  font-size: 14px
+  font-weight: 300
+  line-height: 38px
+  letter-spacing: 0.35px
+
+.browse__link::after 
+  content: "\f0d7"
+  font-family: FontAwesome
+  padding-left: 0.5em
+  color: #838383
+  font-size: 14px
+  line-height: 38px
+
+.drop-browse
+  top: 37px
+  left: -2px
+  border: 1px solid #ececec
+  border-radius: 5px
+  background-color: #ffffff
+  padding: 12px 20px
+  display: none
+  position: absolute
+  z-index: 1
+
+.drop-browse::before
+  content: ''
+  width: 10px
+  height: 10px
+  background-color: #fff
+  border-top: 1px solid #ececec
+  border-left: 1px solid #ececec
+  position: absolute
+  top: -6px
+  left: 69px
+  transform: rotate(45deg)
+
+.drop-down
+  width: 235px
+
+.browse:hover .drop-browse
+  display: flex
+
+.search
+  width: 252px
+  height: 38px
+  border: none
+  background-color: #ffffff
+  color: #a4a4a4
+  font-size: 14px
+  font-weight: 300
+  padding-left: 14px
+  padding-right: 14px
+
+.button-search
+  height: 38px
+  width: 38px
+  border-left: 1px solid #e6e6e6
+  color: #a4a4a4
+  font-size: 14px
+  line-height: 38px
+  text-align: center
+
+.drop-cart
+  top: 39px
+  left: -10px
+  border: 1px solid #ececec
+  border-radius: 5px
+  background-color: #ffffff
+  padding: 5px 15px 10px 15px
+  display: none
+  position: absolute
+  z-index: 1
+
+.drop-cart::before
+  content: ''
+  width: 12px
+  height: 12px
+  background-color: #fff
+  border-top: 1px solid #ececec
+  border-left: 1px solid #ececec
+  position: absolute
+  top: -7px
+  left: 21px
+  transform: rotate(45deg)
+
+.product-in-cart
+  width: 230px
+  display: flex
+  padding-top: 15px
+  padding-bottom: 15px
+  border-bottom: 1px solid #ededed
+  &__link
+    width: 72px
+  &__info
+    margin: 3px 15px
+    width: 110px
+  &__name
+    color: $black-text
+    font-size: 12px
+    font-weight: 700
+    text-transform: uppercase
+  &__rank
+    color: #e4af48
+    font-family: "Font Awesome"
+    font-size: 12px
+    margin-top: 8px
+    margin-bottom: 8px
+  &__quantity
+    color: $color-effect
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+  &__quantity_x
+    font-size: 10px
+
+
+.delete-button
+  display: block
+  color: #c0c0c0
+  font-size: 16px
+
+.delete-button_header
+  margin-top: 35px
+
+.total
+  width: 230px
+  display: flex
+  justify-content: space-between
+  margin-top: 20px
+  margin-bottom: 20px
+  &__text, &__sum
+    color: $black-text
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+
+
+.cart-button
+  display: block
+  height: 50px
+  border: 1px solid #eaeaea
+  background-color: #ffffff
+  color: #4a4a4a
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  line-height: 50px
+  text-align: center
+  padding-left: 40px
+  padding-right: 40px
+  transition: all 0.3s
+  &_header
+    width: 145px
+    margin-top: 10px
+    margin-bottom: 10px
+  &:hover
+    border-color: $color-effect
+    color: $color-effect
+
+.menu
+  list-style-type: none
+  display: flex
+  justify-content: center
+
+.menu__link
+  padding: 20px
+  display: block
+  color: $black-text
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+
+.menu__link-active
+  border-bottom: 3px solid #ef5b70
+
+.promo
+  background-color: #e8e8e8
+  height: 613px
+  &__content
+    background-image: url(../img/promo_back.jpg)
+    height: 100%
+    background-repeat: no-repeat
+    background-position: 0 -51px
+    display: flex
+    align-items: center
+  &__text
+    border-left: 12px solid $color-effect
+    padding-left: 20px
+  &__h2
+    color: $black-text
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 60px
+    letter-spacing: 1.5px
+    line-height: 45px
+  &__h3
+    color: $black-text
+    font-size: 40px
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 32px
+    margin-top: 15px
+  &__h3_color_red
+    color: $color-effect
+
+.collections
+  height: 823px
+  margin-top: 100px
+  display: flex
+  justify-content: space-between
+
+.collections__left, .collections__right
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.man-collection, .accesories, .woman-collection, .kids-collection
+  width: 560px
+  position: relative
+
+.man-collection, .kids-collection
+  height: 542px
+
+.accesories, .woman-collection
+  height: 261px
+
+.accesories
+  background-color: #dadad2
+
+.man-collection__img, .accesories__img, .woman-collection__img, .kids-collection__img
+  max-width: 100%
+
+.accesories__img
+  position: absolute
+  right: 0
+
+.offer
+  height: 82px
+  position: absolute
+  top: 26px
+  background-color: #ffffff
+  &__text
+    margin: 16px 20px
+  &__h3
+    color: $black-text
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 14px
+  &__h2
+    color: $color-effect
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.75px
+    line-height: 46px
+
+
+.product-header
+  margin-top: 92px
+  text-align: center
+
+
+.product-header__h2
+  color: $black-text
+  font-size: 30px
+  font-weight: 700
+  letter-spacing: 0.75px
+
+
+.product-header__h4
+  color: #9f9f9f
+  font-size: 14px
+  font-weight: 400
+  letter-spacing: 0.35px
+  margin-top: 5px
+
+.product-box
+  margin-top: 50px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.product
+  margin-bottom: 40px
+  width: 261px
+  position: relative
+  transition: transform 0.3s
+
+.product__img
+  max-width: 100%
+
+.product:hover .product__add 
+  display: block
+
+.product:hover
+  transform: scale(1.02)
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+
+.product:hover .product__img 
+  filter: brightness(50%)
+
+.product__text
+  padding: 10px 14px 20px
+  position: relative
+
+
+.product__name
+  color: $black-text
+  font-size: 13px
+  font-weight: 400
+  text-transform: uppercase
+
+.product__price
+  color: $color-effect
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  margin-top: 12px
+
+.product__rank
+  color: #e4af48
+  font-family: "Font Awesome"
+  font-size: 15px
+  position: absolute
+  right: 12px
+  bottom: 24px
+  display: none
+
+.product__text:hover .product__rank
+    display: block
+
+.product__add
+  display: none
+  width: 80px
+  height: 39px
+  border: 1px solid #ffffff
+  padding-left: 43px
+  color: #ffffff
+  font-size: 13px
+  font-weight: 700
+  line-height: 39px
+  position: absolute
+  top: 98px
+  left: 70px
+
+.product__add::before 
+  content: ""
+  background-image: url("../img/cart_white.svg")
+  background-repeat: no-repeat
+  width: 23px
+  height: 22px
+  position: absolute
+  top: 10px
+  left: 12px
+
+
+.product__add:hover
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.62)
+
+
+.product__add:active
+  box-shadow: none
+
+
+.browse-product
+  text-align: center
+  margin-top: 40px
+  margin-bottom: 15px
+
+
+.product__button
+  display: inline-block
+  text-align: center
+  width: 212px
+  height: 48px
+  font-size: 16px
+  font-weight: 700
+  line-height: 48px
+  letter-spacing: 0.4px
+
+
+.product__button::after
+  content: "\f30b"
+  font-family: FontAwesome
+  padding-left: 0.5em
+  color: #ffffff
+  font-size: 15px
+  line-height: 48px
+
+
+.special-offers
+  margin-top: 100px
+  margin-bottom: 100px
+  display: flex
+
+
+
+.discount
+  width: 767px
+  height: 529px
+  position: relative
+
+
+.discount__text
+  position: absolute
+  top: 146px
+  left: 39px
+  color: #ffffff
+
+.discount__h2
+  font-size: 54px
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 1.5px
+
+.discount__h2_color_red
+  color: $color-effect
+
+.discount__h3
+  font-size: 32px
+  letter-spacing: 0.9px
+
+.features-box
+  background-color: #222224
+  height: 429px
+  padding: 50px 40px 50px 30px
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+
+.feature__img
+  float: left
+  margin-right: 30px
+
+
+.feature__h3
+  color: #fbfbfb
+  font-size: 20px
+  font-weight: 700
+  letter-spacing: 0.5px
+  margin-bottom: 10px
+
+
+.feature__description
+  overflow: hidden
+
+
+.feature__text
+  color: #fbfbfb
+  font-size: 14px
+  font-weight: 300
+  line-height: 24px
+  letter-spacing: 0.35px
+
+.subscription-box
+  background-image: url(../img/subscription-img.jpg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.subscription-box-flex
+  display: flex
+  height: 438px
+
+.quote
+  flex: 1 50%
+  border-right: 1px solid #ffffff
+  display: flex
+
+.quote__img
+  margin-top: 111px
+  height: 83px
+  width: 83px
+  border-radius: 50%
+
+
+.quote__content
+  margin-top: 123px
+  margin-left: 28px
+  margin-right: 70px
+
+
+.quote__text
+  color: #222224
+  font-size: 16px
+  font-style: italic
+  line-height: 26px
+  letter-spacing: 0.4px
+
+
+.quote__author
+  margin-top: 10px
+  color: $color-effect
+  font-size: 16px
+  font-weight: 700
+  letter-spacing: 0.4px
+
+
+.quote__author-position
+  color: #222224
+  font-size: 12px
+  font-weight: 300
+  letter-spacing: 0.3px
+
+
+.pagination
+  margin-top: 30px
+
+
+.rectangle
+  display: inline-block
+  width: 38px
+  height: 4px
+  background-color: #d6d6d6
+  margin: 5px
+
+
+.rectangle-active
+  background-color: $color-effect
+
+
+.subscription
+  flex: 1 50%
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.subscription__content
+  text-align: center
+
+
+.subscription__h2
+  color: #222224
+  font-size: 24px
+  font-weight: 400
+  letter-spacing: 0.6px
+  text-transform: uppercase
+
+
+.subscription__h3
+  color: #222224
+  font-size: 14px
+  font-weight: 400
+  letter-spacing: 0.35px
+  line-height: 24px
+
+
+.subscription__form
+  margin-top: 30px
+
+
+.subscription__input
+  height: 46px
+  width: 226px
+  background-color: #e1e1e1
+  border: none
+  border-radius: 23px  0 0 23px
+  opacity: 0.67
+  color: #222224
+  font-size: 14px
+  font-weight: 400
+  line-height: 46px
+  letter-spacing: 0.35px
+  padding-left: 28px
+  padding-right: 28px
+
+
+.subscription__button
+  display: inline-block
+  width: 104px
+  height: 46px
+  border-radius: 0 23px 23px 0
+  background-color: $color-effect
+  text-align: center
+  color: #ffffff
+  font-size: 14px
+  font-weight: 400
+  line-height: 46px
+  letter-spacing: 0.35px
+  transition: all 0.2s
+  &:hover
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+  &:active
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4) inset
+
+
+.footer
+  margin-top: 100px
+
+
+.footer__links
+  display: flex
+  justify-content: space-between
+
+
+.footer__descr-info
+  width: 427px
+
+
+.footer__text
+  color: #898989
+  font-size: 14px
+  font-weight: 300
+  line-height: 24px
+  letter-spacing: 0.35px
+
+
+.footer__text p, .footer__descr-info a
+  margin-bottom: 23px
+
+
+.footer__h2
+  color: $color-effect
+  font-size: 18px
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 0.45px
+  margin-top: 20px
+  margin-bottom: 20px
+
+
+.footer__menu
+  display: flex
+  flex-direction: column 
+  justify-content: space-between
+  line-height: 40px
+
+
+.footer__list
+  list-style-type: none
+
+
+.footer__link
+  color: #898989
+  font-size: 16px
+  font-weight: 400
+  letter-spacing: 0.4px
+
+
+.footer__copyright
+  margin-top: 89px
+  background-color: #e6e6e6
+
+
+.footer__copyright-flex
+  height: 79px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+
+.footer__copyright-text
+  color: #7a7a7a
+  font-size: 16px
+  font-weight: 400
+  letter-spacing: 0.4px
+
+
+.social-links
+  display: flex
+
+
+.social-link
+  width: 32px
+  height: 32px
+  background-color: #ffffff
+  color: #b2b2b2
+  font-size: 16px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-left: 4px
+  margin-right: 4px
+
+
+.social-link:hover
+  background-color: $color-effect
+  color: #f7f7f8
+
+
+.social-link:active
+  background-color: #ffffff
+  color: #b2b2b2
+  opacity: 50%
+
+
+.menu__list
+  position: relative
+
+
+.menu__list:hover .drop
+  display: flex
+
+
+.drop
+  top: 48px
+  left: -5px
+  border: 1px solid #ececec
+  border-radius: 5px
+  background-color: #ffffff
+  padding: 12px 20px
+  display: none
+  position: absolute
+  z-index: 1
+
+.drop::before
+  content: ''
+  width: 12px
+  height: 12px
+  background-color: #fff
+  border-top: 1px solid #ececec
+  border-left: 1px solid #ececec
+  position: absolute
+  top: -7px
+  left: 35px
+  transform: rotate(45deg)
+
+
+.drop__flex
+  width: 235px
+  margin-right: 46px
+
+
+.drop__flex:last-of-type
+  margin-right: 0px
+
+
+.drop__ul
+  list-style-type: none
+
+
+.drop__h3
+  border-bottom: 1px solid #ececec
+  color: #232323
+  font-size: 14px
+  font-weight: 400
+  text-transform: uppercase
+  letter-spacing: 0.35px
+  padding-bottom: 8px
+  padding-top: 8px
+  margin-bottom: 8px
+
+.drop__link
+  color: #646464
+  font-size: 14px
+  font-weight: 400
+  line-height: 28px
+  letter-spacing: 0.35px
+
+.drop__link:hover
+  color: $color-effect
+
+.drop_last
+  right: 0
+  left: auto
+
+.drop_last::before
+  right: 50px
+  left: auto
+
+.drop-sale
+  position: relative
+  width: 255px
+  margin-left: -17px
+  margin-top: 15px
+
+.drop-sale__img
+  width: 100%
+
+.drop-sale__text
+  color: #ffffff
+  font-size: 22px
+  font-weight: 400
+  line-height: 28px
+  text-transform: uppercase
+  letter-spacing: 0.55px
+  position: absolute
+  right: 10px
+  bottom: 12px
+
+.heading
+  background-color: #f8f3f4
+  height: 150px
+  min-width: 100%
+  &__content
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__h1
+    color: $color-effect
+    font-size: 24px
+    font-weight: 700
+    text-transform: uppercase
+
+.breadcrumbs
+  &__list
+    display: inline-block
+    &::before
+      content: '/'
+      margin-left: 0.3em
+      margin-right: 0.3em
+      color: #636363
+      font-weight: 400
+    &:first-child::before
+      content: ''
+  &__list-active
+    color: $color-effect
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 700
+  &__link
+    color: #636363
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 400
+    &:hover
+      border-bottom: 1px solid #636363
+
+
+.content-wrapper
+  display: flex
+  justify-content: space-between
+  margin-top: 60px
+
+.vertical-menu
+  width: 243px
+  list-style-type: none
+  &__list
+    margin-bottom: 20px
+  &__details-content
+    list-style-type: none
+    margin: 20px
+  &__details-summary
+    outline: none
+    width: 233px
+    padding-left: 10px
+    line-height: 35px
+    border-left: 5px solid #ef5b70
+    border-bottom: 1px solid #ebebeb
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    display: flex
+    justify-content: space-between
+    &::-webkit-details-marker
+      display: none
+    &::after
+      content: '\f0dd'
+      font-size: 14px
+      font-family: FontAwesome
+      padding-right: 0.5em
+      color: #6f6e6e
+  &__details[open]>.vertical-menu__details-summary
+    color: #ef5b70
+    &::after
+      content: '\f0de'
+      font-family: FontAwesome
+      color: #ef5b70
+  &__details-link
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 33px
+
+.catalog-main
+  width: 846px
+
+.light-button
+  display: block
+  text-align: center
+  border: 1px solid #ef5b70
+  background-color: #ffffff
+  color: #ef5b70
+  transition: all 0.2s
+  &:hover
+    border: none
+    background-color: $color-effect
+    color: #ffffff
+  &:active
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4) inset
+
+@import "catalog"
+
+@import "product"
+
+.pagination-block
+  display: block
+  width: 42px
+  height: 1px
+  background-color: #eaeaea
+  &_active
+    width: 63px
+    height: 3px
+    background-color: #ef5b70
+
+@import "checkout"
+
+.warning-text
+  color: #ff0d0d
+
+@import "cart"

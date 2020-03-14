@@ -1,0 +1,138 @@
+@import "vars"
+
+.product-slider
+  background-color: #f7f7f7
+  &__content
+    max-width: 1600px
+    margin: 0 auto
+    height: 777px
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__img
+    width: 600px
+    position: absolute
+    top: 10px
+    left: 50%
+    margin-left: -300px
+    z-index: 0
+    overflow: hidden
+  &__control-prev, &__control-next
+    display: block
+    width: 47px
+    height: 47px
+    background-color: #d8d8d8
+    color: #ffffff
+    font-size: 14px
+    line-height: 47px
+    text-align: center
+
+.product-info
+  border: 1px solid #eaeaea
+  margin-top: -85px
+  margin-bottom: 50px
+  background-color: #fff
+  position: sticky
+  &__content
+    width: 620px
+    margin: 0 auto 120px
+    text-align: center
+  &__description
+    margin-top: 60px
+    border-bottom: 1px solid #eaeaea
+  &__collection-name
+    margin: 10px
+    color: $color-effect
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+  &__h2
+    margin-top: 15px
+    margin-bottom: 35px
+    color: #4d4d4d
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+  &__text
+    margin-top: 30px
+    margin-bottom: 30px
+    color: #5e5e5e
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+  &__pagination
+    display: flex
+    justify-content: center
+    align-items: center
+  &__characteristics
+    color: #b9b9b9
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    margin: 20px
+    &_black
+      color: #2f2f2f
+  &__price
+    color: #ef5b70
+    font-size: 24px
+    font-weight: 700
+    margin: 40px
+
+.product-filter
+  display: flex
+  justify-content: space-around
+  margin-top: 48px
+  margin-bottom: 28px
+  &__item
+    text-align: left
+  &__label
+    color: #2f2f2f
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    display: block
+    margin-top: 15px
+    margin-bottom: 15px
+  &__field
+    outline: none
+    width: 115px
+    height: 35px
+    padding-left: 15px
+    padding-right: 15px
+    border: 1px solid #eaeaea
+    color: #bcbcbc
+    font-size: 13px
+    font-weight: 400
+    line-height: 35px
+    &_input
+      width: 83px
+  &__button
+    width: 537px
+    height: 55px
+    line-height: 55px
+    font-size: 16px
+    font-weight: 700
+    margin: 0 auto
+  &__button-img
+    width: 26px
+    height: 24px
+    margin-bottom: -5px
+    margin-right: 1em
+
+
+.related
+  margin-top: 50px
+  margin-bottom: 30px
+.related__h1
+  color: #4d4d4d
+  font-size: 24px
+  font-weight: 700
+  text-transform: uppercase
+  margin-top: 20px
+  margin-bottom: 20px
+  text-align: center
+
+
+
+

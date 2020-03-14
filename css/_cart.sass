@@ -1,0 +1,157 @@
+@import "vars"
+
+.cart
+  margin-top: 70px
+  margin-bottom: 60px
+  &__header, &__product
+    display: flex
+    padding-top: 20px
+    padding-bottom: 20px
+    border-bottom: 1px solid #eaeaea
+    align-items: center
+  &__description-header, &__description
+    flex: 4.1 41%
+  &__value-header, &__value
+    flex: 1.1 11%
+    display: flex
+    justify-content: center
+  &__value-header_price, &__value_price
+    flex: 1.5 15%
+  &__value-header, &__description-header
+    color: $black-text
+    font-size: 13px
+    font-weight: 700
+    text-transform: uppercase
+  &__product-img
+    height: 115px
+    width: 100px
+  &__description
+    display: flex
+  &__product-text
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin: 10px 20px 20px
+  &__product-name
+    color: $black-text
+    font-size: 13px
+    font-weight: 700
+    text-transform: uppercase
+  &__product-characteristics
+    color: #575757
+    font-weight: 400
+    font-size: 13px
+    line-height: 20px
+    &_gray
+      color: $gray-text
+      font-weight: 300
+  &__value
+    color: #656565
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+  &__product-quantity
+    width: 52px
+    height: 30px
+    border: 1px solid #eaeaea
+    text-align: center
+    color: #656565
+    font-size: 13px
+    font-weight: 400
+    line-height: 30px
+  &__button-box
+    margin-top: 45px
+    margin-bottom: 45px
+    display: flex
+    justify-content: space-between
+
+.confirm-box
+  display: flex
+  justify-content: space-between
+  margin-bottom: 80px
+  &__h2
+    color: $black-text
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+  &__text
+    color: #000000
+    font-size: 14px
+    font-weight: 300
+    margin-top: 20px
+    margin-bottom: 20px
+  &__text-field, &__select
+    display: block
+    width: 321px
+    height: 45px
+    border: 1px solid #eaeaea
+    color: #b1b1b1
+    font: 300 13px 'Lato', sans-serif
+    line-height: 45px
+    padding-left: 17px
+    padding-right: 17px
+    margin-top: 20px
+    margin-bottom: 20px
+    &::-webkit-input-placeholder
+      color: #b1b1b1
+    &:-moz-placeholder
+      color: #b1b1b1
+      opacity: 1
+    &::-moz-placeholder
+      color: #b1b1b1
+      opacity: 1
+    &:-ms-input-placeholder
+      color: #b1b1b1
+  &__select
+    width: 356px
+  &__button
+    display: inline-block
+    height: 35px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    padding-left: 15px
+    padding-right: 15px
+    color: #4a4a4a
+    font-size: 11px
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 35px
+    &:hover
+      border-color: $color-effect
+      color: $color-effect
+
+.total-box
+  height: 214px
+  background-color: #f5f3f3
+  &__text
+    text-align: right
+    margin: 40px 40px 20px
+    border-bottom: 1px solid #e2e2e2
+  &__h2
+    color: $black-text
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    padding-top: 15px
+    padding-bottom: 15px
+    &_red
+      color: $color-effect
+      margin-left: 1em
+  &__h3
+    color: #4a4a4a
+    font-size: 11px
+    font-weight: 400
+    text-transform: uppercase
+    &_bold
+      font-weight: 700
+      margin-left: 1em
+  &__button
+    display: block
+    height: 50px
+    padding-left: 40px
+    padding-right: 40px
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 50px
+    margin: 20px 40px 40px

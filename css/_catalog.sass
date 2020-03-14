@@ -1,0 +1,174 @@
+@import "vars"
+
+.filter
+  display: flex
+  justify-content: space-between
+  &__trending, &__size, &__price
+    flex-basis: 0
+    flex-grow: 1
+  &__trending, &__size
+    margin-right: 50px
+  &__title
+    color: $gray-text
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    margin-top: 10px
+    margin-bottom: 10px
+  &__trending-box
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    list-style-type: none
+  &__trending-list
+    color: $gray-text
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    &::before
+      content: '|'
+      margin-right: 0.5em
+      color: #dfdfdf
+    &:first-child::before
+      content: ''
+      margin-right: 0
+  &__label
+    color: $gray-text
+    font-family: 'Open Sans', sans-serif
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
+    width: 50px
+    display: inline-block
+
+.sort
+  height: 50px
+  background-color: #f3f3f3
+  margin-top: 40px
+  display: flex
+  align-items: center
+  form
+    border: 1px solid #ebebeb
+    margin: 10px
+  &__label
+    color: $gray-text
+    font-size: 14px
+    font-weight: 400
+    line-height: 30px
+    padding-left: 10px
+    padding-right: 10px
+    display: inline-block
+    height: 30px
+    background-color: #fff
+    margin-right: -2px
+  select
+    height: 30px
+    color: $gray-text
+    font-size: 14px
+    font-weight: 400
+    padding-left: 10px
+    padding-right: 10px
+    border: none
+    font-family: 'Lato', sans-serif
+
+
+.range-wrapper
+  position: relative
+
+.range
+  -webkit-appearance: none
+  width: 262px
+  height: 6px
+  border-radius: 3px
+  background-color: $color-effect
+  position: absolute
+  top: 0
+
+.range::-webkit-slider-thumb
+  -webkit-appearance: none
+  width: 14px
+  height: 14px
+  background-color: $color-effect
+  border-radius: 14px
+  cursor: pointer
+  box-sizing: content-box
+
+.range::-moz-range-thumb
+  width: 14px
+  height: 14px
+  background-color: $color-effect
+  border: none
+  border-radius: 14px
+  cursor: pointer
+
+.range::-ms-thumb
+  width: 14px
+  height: 14px
+  background-color: $color-effect
+  border-radius: 14px
+  cursor: pointer
+
+.range::-ms-fill-lower
+  background-color: #f0f0f0
+
+.range::-moz-range-progress
+  background-color: #f0f0f0
+  height: 6px
+  border-radius: 3px
+
+.result-text-min, .result-text-max
+  color: $gray-text
+  font-family: 'Open Sans', sans-serif
+  font-size: 14px
+  font-weight: 400
+  position: absolute
+  top: 30px
+
+.result-text-max
+  right: 0
+
+.catalog-nav
+  display: flex
+  justify-content: space-between
+  &__button
+    width: 150px
+    height: 44px
+    border-radius: 3px
+    font-size: 16px
+    font-weight: 700
+    line-height: 44px
+
+.pagination-num
+  list-style-type: none
+  display: flex
+  border-radius: 3px
+  border: 1px solid #ebebeb
+  &__link
+    color: #c4c4c4
+    font-size: 16px
+    font-weight: 700
+    line-height: 44px
+    padding-right: 10px
+    padding-left: 10px
+    &:hover
+      color: #ef5b70
+    &_active
+      color: #ef5b70
+
+.features-box-wrapper
+  background-color: #222224
+  margin-top: 110px
+
+.catalog-features-box
+  height: 340px
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+  & .feature
+    text-align: center
+    margin: 0 25px
+  & .feature__img
+    float: none
+    margin: 0 0 30px
